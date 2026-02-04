@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+.slide-track {
+  display: flex;
+  gap: 20px;
+  animation: Scroll 15s linear infinite;
+  width:max-content;
+}
+.slide-track img {
+  height: 300px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+@keyframes Scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@font-face {
+  font-family: "Transducer";
+  src: url("/src/assets/font/TransducerTest-Regular-BF645c3dd843c3b.otf")
+       format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Transducer";
+  src: url("/src/assets/font/transducer/Transducer-Medium.otf")
+       format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Transducer";
+  src: url("/src/assets/font/transducer/Transducer-Bold.otf")
+       format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Transducer";
+  src: url("/src/assets/font/transducer/Transducer-Italic.otf")
+       format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Test font */
+@font-face {
+  font-family: "Transducer";
+  src: url("/src/assets/font/TransducerTest-BoldOblique-BF645c3dd7f1208.otf") format("opentype");
+  font-weight:700;
+  font-style: oblique;
+  font-display: swap;
+}
+
+wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  display: inline-block;
+  width:100px;
+}
+
+/* Outer border */
+.border-box {
+  border: 1px solid #cfcfcf;
+  padding: 20px 50px;
+}
+
+/* Main ribbon */
+.ribbon {
+  position: relative;
+  background-color: #c62828;
+  color: #fff;
+  padding: 14px 60px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  width: 450px;
+}
+
+/* Left slant */
+.ribbon::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+  border-right: 20px solid #c62828;
+}
+
+/* Right slant */
+.ribbon::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+  border-left: 20px solid #c62828;
+}
+
+/* Hover */
+.ribbon:hover {
+  background-color: #b71c1c;
+}
+
+.ribbon:hover::before {
+  border-right-color: #b71c1c;
+}
+
+.ribbon:hover::after {
+  border-left-color: #b71c1c;
+}
+.btn{
+   
+    color: white;
+    padding: 10px 30px;
+    /* margin: 20px; */
+    cursor: pointer;
+
+}
+
+.btnCtr{
+   background-color: red;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100px; */
+    padding: 7px;
+    margin:20px;
+    position: relative;
+    
+}
+
+.btnCtr::after{
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: -1px;
+}
+.btnCtr::before{
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -1px;
+}
