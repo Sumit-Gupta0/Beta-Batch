@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rock-paper.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Rock Paper Seissor Game</h1>
+            <p>Computer : <span id="guess">Guess</span></p>
+
+            <div class="input">
+                <input type="checkbox" id="paper">
+                <label for="paper">Paper</label>
+
+                <input type="checkbox" id="rock">
+                <label for="rock">Rock</label>
+
+                <input type="checkbox" id="seissor">
+                <label for="Seissor">Seissor</label>
+            </div>
+        </div>
+
+        <button id="btn" onclick="fetchCheckBox()">Click here</button>
+
+        <p id="win">You Win</p>
+        <p id="loose">You Loose</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="rock-paper.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+// 1. Hooks ->
+
+// useState
+
+// const [name,useName] = useState("")
+
+// name = variable
+// useName = Function
+//  useState = array
+
+// data spreading 
+
+// ...data
